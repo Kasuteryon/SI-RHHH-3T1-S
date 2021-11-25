@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% block main%}
+    <section class="container">
+        <div class="container" style="margin-top: 30px; margin-bottom: 20px;">
+            <h3 class="text-center">I. Información Personal</h3>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">1. Datos Generales</h5>
+                    
+                        <div class="row">
+
+                            <div class="col-lg-6 col-sm-12">
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Primer Nombre">
+                                    <label for="floatingInput">Primer Nombre</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Segundo Nombre">
+                                    <label for="floatingInput">Segundo Nombre</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Documento Único de Identidad">
+                                    <label for="floatingInput">Documento Único de Identidad</label>
+                                </div>
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                      <option selected disabled>Selecciona</option>
+                                      <option value="1">No</option>
+                                      <option value="2">Si</option>
+                                    </select>
+                                    <label for="floatingSelect">Tiene Licencia</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Primer Apellido">
+                                    <label for="floatingInput">Primer Apellido</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Segundo Nombre">
+                                    <label for="floatingInput">Segundo Nombre</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                      <option selected disabled>Selecciona</option>
+                                      <option value="1">Masculino</option>
+                                      <option value="2">Femenino</option>
+                                      <option value="3">No Binario</option>
+                                    </select>
+                                    <label for="floatingSelect">Género</label>
+                                </div>
+
+                            </div>
+                        </div>
+                      <div class="row">
+                        <div class="mb-3">
+                          <label for="formFile floatingInput" class="form-label">Foto de Perfil</label>
+                          <input class="form-control" type="file" id="formFile">
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 10px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <h5 class="card-title">2. Fecha y Lugar de Nacimiento</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control" id="floatingInput" placeholder="Segundo Nombre">
+                                    <label for="floatingInput">Fecha de Nacimiento</label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                      <option selected>Selcciona</option>
+                                      <option value="1">Managua</option>
+                                      <option value="2">Leon</option>
+                                      <option value="3">Chinandega</option>
+                                    </select>
+                                    <label for="floatingSelect">Ciudad</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                      <option selected>Selcciona</option>
+                                      <option value="1">Nicaragua</option>
+                                      <option value="2">Honduras</option>
+                                      <option value="3">Costa Rica</option>
+                                    </select>
+                                    <label for="floatingSelect">Pais</label>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            
+
+            <div class="card" style="margin-top: 10px; margin-bottom: 20px;">
+                <div class="card-body">
+                    <h5 class="card-title">3. Estado Civil y Economía</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                      <option selected>Selcciona</option>
+                                      <option value="1">Soltero</option>
+                                      <option value="2">Casado</option>
+                                      <option value="3">Unión Libre</option>
+                                    </select>
+                                    <label for="floatingSelect">Estado Civil</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                  <input type="number" class="form-control" id="floatingInput" placeholder="Aspiración Salarial">
+                                  <label for="floatingInput">(C$) Aspiración Salarial</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                  <input type="number" class="form-control" id="floatingInput" placeholder="Monto Deudas">
+                                  <label for="floatingInput">(C$) Monto Deudas</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="floatingInput" placeholder="Segundo Nombre">
+                                    <label for="floatingInput">N° Dependientes</label>
+                                </div>
+                                
+                                <div class="form-floating mb-3">
+                                  <input type="number" class="form-control" id="floatingInput" placeholder="Gasto Mensual">
+                                  <label for="floatingInput">(C$) Gasto Mensual</label>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="formFile" class="form-label">Curriculum Vitae</label>
+                                  <input class="form-control" type="file" id="formFile">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="d-grid gap-2 mx-auto">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-outline-success">
+                                Guardar <i class='bx bx-add-to-queue'></i>
+                            </button>
+                        </div>
+                        </div>
+                </div>
+            </div>
+
+            
+    </section>
+{% endblock %}

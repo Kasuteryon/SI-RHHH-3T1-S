@@ -1,0 +1,108 @@
+{% load django_bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'style/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'style/side-bars.css' %}">
+    {% bootstrap_css %}
+
+    {% bootstrap_javascript %}
+
+    {% bootstrap_messages %}
+    
+    <title>SIRRHH</title>
+</head>
+<body>
+<div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bx-select-multiple icon'></i>
+        <div class="logo_name">SIRRHH</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list" id="nav-list">
+      
+      <li>
+        <a href="{% url 'index' %}">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name">Inicio</span>
+        </a>
+         <span class="tooltip">Inicio</span>
+      </li>
+      
+      <li>
+      <li>
+        <a href="{% url 'reclutamiento' %}">
+            <i class='bx bx-spreadsheet' ></i>
+          <span class="links_name">Reclutamiento</span>
+        </a>
+        <span class="tooltip">Reclutamiento</span>
+      </li>
+      
+      <li>
+        <a href="{% url 'seleccion' %}">
+            <i class='bx bx-clipboard'></i>
+          <span class="links_name">Selección</span>
+        </a>
+        <span class="tooltip">Selección</span>
+      </li>
+      <li>
+        <a href="./Contratacion.html" class="user-made">
+          <i class='bx bx-group'></i>
+          <span class="links_name">Contratación</span>
+        </a>
+         <span class="tooltip">Contratación</span>
+      </li>
+      
+      <li>
+        <a href="{% url 'movimientopersonal' %}" class="user-made">
+          <i class='bx bx-walk' ></i>
+          <span class="links_name">Movimientos Personal</span>
+        </a>
+         <span class="tooltip">Movimientos de Personal</span>
+      </li>
+      <li>
+        <a href="{% url 'nomina' %}" class="user-made">
+          <i class='bx bx-book-bookmark' ></i>
+          <span class="links_name">Gestión de Nómina</span>
+        </a>
+         <span class="tooltip">Gestión de Nómina</span>
+      </li>
+      
+
+      <li>
+        <a href="#" class="user-made">
+            <i class='bx bxs-graduation' ></i>
+          <span class="links_name">Evaluación</span>
+        </a>
+         <span class="tooltip">Evaluación</span>
+      </li>
+      <li class="profile">
+          <div class="profile-details">
+            <img src="https://kasuteryon.github.io/cs50w-project0/resources/EICC%20Foto%20Carnet%20Blank.png" alt="profileImg">
+            <div class="name_job">
+              <div class="name">{{ user.username }}</div>
+              <div class="job">Responsable RRHH</div>
+            </div>
+          
+          </div>
+          <a href="./login.html">
+            <i class='bx bx-log-out' id="log_out" ></i>
+          </a>
+          
+      </li>
+    </ul>
+  </div>
+  
+    {% block main %}
+    {% endblock %}
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>

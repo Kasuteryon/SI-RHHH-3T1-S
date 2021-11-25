@@ -1,0 +1,129 @@
+{% load django_bootstrap5 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    {% bootstrap_css %}
+
+    {% bootstrap_javascript %}
+
+    {% bootstrap_messages %}
+
+	
+	  <link rel="stylesheet" href="{% static 'style/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'style/side-bars.css' %}">
+    
+    <title>SIRRHH</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'img/INTA.png' %}" width="240" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">SIRRHH inta</a>
+          </li>
+          <li class="nav-link">{{ user.username }} <i class='bx bx-user-pin'></i></li>
+            <li class="nav-link"></li>
+            <li class="">
+              <a class="nav-link" href="">Cerrar Sesión <i class='bx bx-log-out'></i></a>
+            </li>
+        </ul>
+      
+      </div>
+    </div>
+  </nav>
+        <div class="container" style="margin-top: 120px;">
+            
+          <div class="card" style="padding: 10px;">
+            </h3>
+            <div class="card-body">
+
+              <div class="row"> 
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                  <div class="card text-center" style="margin-bottom: 20px;">
+                    <img src="https://factorcapitalhumano.com/wp-content/uploads/2019/06/Tips-Reclutamiento-de-personal.jpg"class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Módulo de Reclutamiento</h5>
+                      <p class="card-text">En esta sección tendrá disponible todas las herramientas para el proceso de <b>Reclutamiento de Personal.</b></p>
+                      <a href="{% url 'reclutamiento' %}" class="btn btn-success">Ir...</a>
+                    </div>
+                  </div>
+
+                  <div class="card text-center" style="margin-bottom: 20px;">
+                    <img src="https://empresas.infoempleo.com/hrtrends/media/2019/03/HRTRENDS_sistemas-ats-reclutamiento-1.jpg"class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Módulo de Control y Seguimiento de Personal</h5>
+                      <p class="card-text">En esta sección tendrá disponible todas las herramientas para el proceso de <b>Seguimiento de Personal.</b></p>
+                      <a href="{% url 'movimientopersonal' %}" class="btn btn-success">Ir...</a>
+                    </div>
+                  </div>
+                  
+
+                </div>
+                
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="card text-center" style="margin-bottom: 20px;">
+                    <img src="https://hr.kenjo.io/hubfs/etapas-proceso-reclutamiento-y-seleccion.jpeg"class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Módulo de Selección</h5>
+                      <p class="card-text">En esta sección tendrá disponible todas las herramientas para el proceso de <b>Selección de Personal.</b></p>
+                      <a href="{% url 'seleccion' %}" class="btn btn-success">Ir...</a>
+                    </div>
+                  </div>
+                  
+                  <div class="card text-center" style="margin-bottom: 20px;">
+                    <img src="https://img.caminofinancial.com/wp-content/uploads/2020/02/20174728/iStock-1158626456-Copy-1024x732.jpg"class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Módulo de Nómina</h5>
+                      <p class="card-text">En esta sección tendrá disponible todas las herramientas para el proceso de <b>Nómina de Personal.</b></p>
+                      <a href="{% url 'nomina' %}" class="btn btn-success">Ir...</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 col-sm-12">
+
+                  <div class="card text-center" style="margin-bottom: 20px;">
+                    <img src="https://factorcapitalhumano.com/wp-content/uploads/2020/01/proceso-reclutamineto-recursos-humanos.jpg"class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Módulo de Contratación</h5>
+                      <p class="card-text">En esta sección tendrá disponible todas las herramientas para el proceso de <b>Contratación de Personal.</b></p>
+                      <a href="./Contratacion.html" class="btn btn-success">Ir...</a>
+                    </div>
+                  </div>
+
+                  <div class="card text-center" style="margin-bottom: 20px;">
+                    <img src="https://www.bumeran.com.mx/noticias/wp-content/uploads/2019/12/evaluaci%C3%B3n-del-desempe%C3%B1o-laboral.jpg"class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Módulo de Evaluación al Desempeño</h5>
+                      <p class="card-text">En esta sección tendrá disponible todas las herramientas para el proceso de <b>Evaluación al Desempeño.</b></p>
+                      <a href="#" class="btn btn-success">Ir...</a>
+                    </div>
+                  </div>
+
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+      <script src="../JS/scripts.js"></script>
+    </body>
+</html>
