@@ -22,14 +22,14 @@ Link:
 <https://git-scm.com/downloads>
 
 
-#### MySQL WorkBench 8.0
+### MySQL WorkBench 8.0
 
 ![Imagen](./img/mysql.png)
 
 Link:
 <https://www.mysql.com/products/workbench/>
 
-#### Python en su última versión
+### Python en su última versión
 
 ![Imagen](./img/python.png)
 
@@ -73,3 +73,16 @@ Luego, aplicar el siguiente comando python (que ya debería estar instalado) par
 ![Imagen](./img/open.png)
 
 Se tiene que copiar y pegar la ruta sombreada
+
+## Rutas
+
+### Para acceder al admin del SIRRHH: /admin
+![Imagen](./img/admin.png)
+
+
+### Para acceder al SIRRHH General: "/"
+![Imagen](./img/sirrhh.png)
+
+
+## Para acceder a la Vista de Postulante: "/Vacantes"
+![Imagen](./img/vacantes.png)
