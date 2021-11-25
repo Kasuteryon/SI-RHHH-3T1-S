@@ -1,0 +1,129 @@
+{% load django_bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login SIRRHH</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">	
+
+	{% bootstrap_css %}
+
+    {% bootstrap_javascript %}
+
+    {% bootstrap_messages %}
+
+	
+	<link rel="stylesheet" href="{% static 'style/login-style.css' %}">
+    
+</head>
+
+<body>			
+  <div class="section">
+	{% if form.errors %}
+    <p>Datos Inválidos.</p>
+	{% endif %}
+
+	{% if next %}
+		{% if user.is_authenticated %}
+		<p>Tu cuenta no tiene acceso a esta página. Para proceder, ingresa con una que tenga los permisos.</p>
+		{% else %}
+		<p>Inicia Sesión para ver.</p>
+		{% endif %}
+	{% endif %}
+		<div class="container">
+		    <div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+					<div class="section pb-5 pt-5 pt-sm-2 text-center headerA show-on-scroll">
+			          	<label for="reg-log"></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+									<div class="center-wrap">
+										<div class="section text-center">
+
+											<form method="post" action="{% url 'login' %}">
+												{% csrf_token %}
+												<h4 class="mb-4 pb-3">Login SIRRHH</h4>
+												
+												<div class="form-group">
+													<input required type="text" name="username" 
+													class="form-style" 
+													placeholder="Usuario" 
+													id="id_username" 
+													autocomplete="none">
+													<i class="input-icon uil uil-at"></i>
+												</div>	
+												<div class="form-group mt-2">
+													<input required type="password" name="password" 
+													class="form-style" 
+													placeholder="Contraseña" 
+													id="id_password" autocomplete="none">
+													<i class="input-icon uil uil-lock-alt"></i>
+												</div>
+
+												<div class="d-grid gap-2">
+													<input type="submit" name="login"value="login" class="btn mt-4" />
+												</div>
+												
+												
+											</form>
+
+				      					</div>
+			      					</div>
+			      				</div>
+
+							</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+	</div>
+	<footer class="footer-back headerA show-on-scroll" style="background-color: #f0f5ff; padding-top: 10px;">
+
+        <div class="text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-6 col-lg-4 col-xl-6 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: black">Acerca de</h6>
+              <p class="text-justify" style="color: black">
+                El Instituto Nicaragüense de Tecnología Agropecuaria (INTA) fue creado en 1993 por Decreto No 2293, y publicado en el Diario Oficial La Gaceta # 61 del 26 de Marzo del mismo año. Es una Institución del Poder Ejecutivo y miembro del Gabinete de la Producción del Gobierno de Reconciliación y Unidad Nacional. 
+              </p>
+
+              <p class="text-justify" style="color: black">
+                En el marco del fortalecimiento de nuestro modelo de desarrollo agropecuario nos proponemos reorientar nuestra estrategia de trabajo, desarrollando la investigación e innovación a fin de incrementar la producción y productividad principalmente de pequeños y medianos productores/as de nuestro país.
+            </p>
+              
+            </div>
+            
+
+            <!-- Grid column -->
+    
+      
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4" style="color: black">
+                Contacto
+              </h6>
+              <p style="color: black">Managua, Nicaragua</p>
+              <p style="color: black">eduardocastellon2002@gmail.com</p>
+              <p style="color: black">+505 5846 2103</p>  
+              <p style="color: black"><a href="https://www.instagram.com/xeiccx/" class="text-reset" target="_blank">@xeiccx</a></p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          
+        </div>
+          <div class="text-center p-4" style="color: black">
+            © 2021 Copyright: Las divinas S.A
+          </div>
+    
+      </footer>
+	
+</body>
+</html>
