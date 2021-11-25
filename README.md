@@ -54,7 +54,7 @@ Link:
 
 #### 2. Navegar hasta el código fuente y ejecutarlo.
 
-Abre una consola de git ahí mismo y navega 'cd SI-RRHH-3T1-S/SIRRHHv1/SIRRH'
+Abre una consola de git ahí mismo y navega 'cd SI-RRHH-3T1-S/SIRRHHv1/SIRRHH'
 
 Luego, aplicar el siguiente comando python (que ya debería estar instalado) para instalar los plugins:
 
