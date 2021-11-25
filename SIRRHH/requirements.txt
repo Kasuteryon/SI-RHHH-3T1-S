@@ -1,6 +1,0 @@
-python
-django
-mysqlclient
-django_bootstrap5
-django-jet-reboot
-google-api-python-client==1.4.1
